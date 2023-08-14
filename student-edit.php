@@ -30,11 +30,11 @@ require'dbcon.php';
     $student_id=mysqli_real_escape_string($con,$_GET['id']);
     $query="SELECT *FROM students WHERE id='$student_id";
     $query_run=mysqli_query($con,$query);
-    if(mysqli_num_rows($query_run)>0)
-    }s
+    if(mysqli_num_rows($query_run)>0);
+    }
         $student=mysqli_fetch_arry($query_run);
         ?>
-        <form action="hidden"name="student_id"value="<?=$student['id'];?">
+        <form action="hidden"name="student_id"value="<?=$student['id'];"?">
         <div class="mb-3">
         <label>Nome</label>
         <input type="text"name="name"value="<?=$student['name'];?>"class="form-control">
